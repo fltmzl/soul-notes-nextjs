@@ -1,0 +1,16 @@
+.tiptap-menubar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  button {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0.2rem 0.4rem;
+
+    &.is-active {
+      background-color: black;
+      color: white;
+    }
+  }
+}

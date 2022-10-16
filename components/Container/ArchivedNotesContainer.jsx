@@ -4,12 +4,11 @@ import { useState } from "react";
 import DeleteDialog from "../Dialog/DeleteDialog";
 import useDeleteValue from "@/hooks/useDeleteValue";
 import { AnimatePresence } from "framer-motion";
-import useGetActiveNotes from "@/hooks/useGetActiveNotes";
+import useGetArchivedNotes from "@/hooks/useGetArchivedNotes";
 import HeaderNotesContainer from "./HeaderNotesContainer";
 
-const NotesContainer = () => {
-  const [notes, loading, error] = useGetActiveNotes();
-  console.log(notes);
+const ArchivedNotesContainer = () => {
+  const [notes, loading, error] = useGetArchivedNotes();
   const [deleteValue, isLoading] = useDeleteValue();
   const [deleteDialog, setDeleteDialog] = useState({
     show: false,
@@ -58,7 +57,7 @@ const NotesContainer = () => {
           <h1>loading</h1>
         ) : (
           notes.map((note, index) => {
-            return <NoteCard key={index} item={note} onDelete={() => showDeleteDialog(note.id)} delayAnimation={index} />;
+            return <NoteCard key={index} item={note} onDelete={() => showDeleteDialog(note.id)} delayAnimation={index} isArchived />;
           })
         )}
       </Masonry>
@@ -67,4 +66,4 @@ const NotesContainer = () => {
   );
 };
 
-export default NotesContainer;
+export default ArchivedNotesContainer;

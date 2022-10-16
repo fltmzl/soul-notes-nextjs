@@ -6,7 +6,8 @@
       "@/config/*": ["config/*"],
       "@/hooks/*": ["hooks/*"],
       "@/assets/*": ["public/assets/*"],
-      "@/context/*": ["context/*"]
+      "@/context/*": ["context/*"],
+      "@/styles/*": ["styles/*"]
     }
   }
 }

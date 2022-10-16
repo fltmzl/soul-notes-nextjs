@@ -1,6 +1,6 @@
 import { auth } from "@/config/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { createContext, useEffect, useReducer, useState } from "react";
+import { createContext, useContext, useEffect, useReducer, useState } from "react";
 
 const INITIAL_VALUE = {
   user: null,
@@ -22,6 +22,8 @@ const authReducer = (state, action) => {
       break;
   }
 };
+
+export const useAuthContext = () => useContext(AuthContext);
 
 export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, INITIAL_VALUE);

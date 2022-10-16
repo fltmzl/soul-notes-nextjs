@@ -46,10 +46,52 @@
   }
 
   .my-masonry-grid_column {
-    @apply pl-3;
+    @apply px-2;
   }
 
   .my-masonry-grid_column > * {
     @apply block mb-3;
+  }
+}
+
+@layer utilities {
+  .bg-customPrimary {
+    @apply bg-customLight-50 dark:bg-customDark-200;
+  }
+
+  .bg-customSecondary {
+    @apply bg-customLight-100 dark:bg-customDark-100;
+  }
+
+  .bg-customTernary {
+    @apply bg-customLight-50 dark:bg-customDark-50;
+  }
+
+  .icon-center {
+    @apply grid place-content-center;
+  }
+
+  .bg-card-red {
+    @apply bg-red-300 dark:bg-red-900;
+  }
+
+  .bg-card-blue {
+    @apply bg-blue-300 dark:bg-blue-900;
+  }
+
+  .bg-card-yellow {
+    @apply bg-yellow-300 dark:bg-yellow-900;
+  }
+
+  .bg-card-green {
+    @apply bg-green-300 dark:bg-green-900;
+  }
+
+  .bg-card-pink {
+    @apply bg-pink-300 dark:bg-pink-900;
+  }
+
+  .bg-card-purple {
+    @apply bg-purple-300 dark:bg-purple-900;
   }
 }

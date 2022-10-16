@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import "../styles/globals.css";
 import "../styles/richtext.css";
+import "@/styles/tiptap.scss";
 import { NoteFormContextProvider } from "@/context/NoteFormContext";
 
 function MyApp({ Component, pageProps }) {

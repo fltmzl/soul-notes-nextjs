@@ -34,24 +34,14 @@ const Home = () => {
   return (
     <MainLayout>
       <Head>
-        <title>My Notes | Home</title>
+        <title>SoulNotes | Home</title>
       </Head>
 
-      <main className="p-5 w-full bg-customLight-100 dark:bg-customDark-100 overflow-y-scroll relative z-20">
-        <header className="relative flex justify-between">
+      <main className="p-5 w-full bg-customSecondary overflow-y-scroll relative z-20">
+        <header className="flex flex-col sm:flex-row gap-3 justify-between">
           <Searchbar />
           <AddNoteBtn />
         </header>
-        <div className="flex justify-between text-customGray-50 my-6">
-          <div className="text-xs">
-            <p>20 Notes</p>
-          </div>
-          <div className="flex gap-2">
-            <BsGridFill />
-            <BiSortDown />
-            <HiOutlineFilter />
-          </div>
-        </div>
         <NotesContainer />
         <Theme />
       </main>

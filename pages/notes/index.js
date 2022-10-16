@@ -1,13 +1,13 @@
 import "quill/dist/quill.snow.css";
 import { useContext } from "react";
-import { db } from "@/config/firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { serverTimestamp } from "firebase/firestore";
 import { AuthContext } from "@/context/AuthContext";
 import Button from "@/components/Button";
 import useQuillCustom from "@/hooks/useQuillCustom";
 import MainLayout from "@/components/Layout/MainLayout";
 import { useRouter } from "next/router";
 import useCreateValue from "@/hooks/useCreateValue";
+import Tiptap from "@/components/Input/Tiptap";
 
 const Notes = () => {
   const { user, loadingAuth } = useContext(AuthContext);
@@ -34,9 +34,10 @@ const Notes = () => {
     <MainLayout>
       <div>
         <form onSubmit={onSave} className="space-y-6 p-5">
-          <div className={`w-full bg-customLight-50 dark:bg-customDark-50`}>
+          {/* <div className={`w-full bg-customLight-50 dark:bg-customDark-50`}>
             <div ref={quillRef} />
-          </div>
+          </div> */}
+          <Tiptap />
           {isLoading ? <Button>Saving</Button> : <Button type="submit">Save</Button>}
         </form>
       </div>
